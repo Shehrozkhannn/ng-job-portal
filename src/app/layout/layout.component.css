@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+.sidebar {
+    width: 30%;
+}
+
+.main-layout {
+    width: 65%;
+    margin-top: 18px;
+    border: 2px solid #fff
+}
+.footer{
+    height: 180px;
+    width: 100%;
+    background-color: white;
+}
+
+@media(max-width:372px){
+    .main-layout{
+        width: 100%;
+        border: 2px solid #fff;
+        margin-top: 0;
+    }
+    .sidebar{
+        display: none;
+    }
+    .container{
+        padding: 0;
+    }
+
+}

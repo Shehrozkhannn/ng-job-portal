@@ -1,0 +1,63 @@
+<div class="sidebar-container">
+    <div class="sidebar-section">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>JOB TYPE</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <span *ngFor="let job of data.job_type" class="job-data">
+                    <p>{{job.key}}</p>
+                    <p>{{job.doc_count}}</p>
+                </span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="sidebar-section">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Departments</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <span *ngFor="let job of data.department;let i = index" class="job-data">
+                    <div *ngIf = "i > 9">
+                        <p>{{job.key}}</p>
+                        <p>{{job.doc_count}}</p>
+                    </div>
+
+                </span>
+                <span class="show-more">
+                    <p (click)="detailModal()">show more</p>
+                </span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="sidebar-section">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Work Schedule</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <span *ngFor="let job of data.work_schedule" class="job-data">
+                    <p>{{job.key}}</p>
+                    <p>{{job.doc_count}}</p>
+                </span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="sidebar-section">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Experience</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <span *ngFor="let job of data.experience" class="job-data">
+                    <p>{{job.key}}</p>
+                    <p>{{job.doc_count}}</p>
+                </span>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

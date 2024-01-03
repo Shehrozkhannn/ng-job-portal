@@ -1,0 +1,54 @@
+<div class="navbar">
+    <div class="bar">
+        <i class="bi bi-list"></i>
+    </div>
+    <div class="navbar-title">
+
+        <h3>HEALTH EXPLORE</h3>
+    </div>
+
+    <div class="navbar-links">
+        <ul>
+            <li>
+                <a>PROFILE</a>
+            </li>
+            <li>
+                <a>JOBS</a>
+            </li>
+            <li>
+                <a>PROFESSIONAL NETWORK</a>
+            </li>
+            <li>
+                <a>LOUNGE</a>
+            </li>
+            <li>
+                <a>SALARY</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="navbar-button">
+        <button>CREATE JOB</button>
+    </div>
+
+    <span class="mat-button-container">
+        <button class="mat-button" mat-raised-button matBadge="2" [matBadgeHidden]="hidden"
+            (click)="toggleBadgeVisibility()">
+            SK
+        </button>
+    </span>
+
+    <div class="navbar-logout-button">
+        <button>LOGOUT</button>
+    </div>
+</div>
+<form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+
+        <input matInput placeholder="Search for any job, title, keywords or company"
+            (keyup)="searchJobs($event)">
+        <div class="search-icon">
+            <i class="bi bi-search"></i>
+        </div>
+    </mat-form-field>
+</form>

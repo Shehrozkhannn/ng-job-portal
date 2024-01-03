@@ -1,0 +1,75 @@
+<div class="accordian-header">
+  <div class="total-jobs-posting">
+    <p>
+      <span style="font-weight: 900;">7,753</span>
+      job postings</p>
+  </div>
+  <div class="accordian-links">
+    <ul>
+      <li>
+        <a href="#">Sort by</a>
+      </li>
+      <li>
+        <a href="#">Location</a>
+      </li>
+      <li>
+        <a href="#">Role</a>
+      </li>
+      <li>
+        <a href="#">Department</a>
+      </li>
+      <li>
+        <a href="#">Education</a>
+      </li>
+      <li>
+        <a href="#">Experience</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let job of data" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div class="main-title">
+          <!-- avatar for the list -->
+          <div class="avatar">
+            {{ job.name.substring(0, 2).toUpperCase()}}
+          </div>
+          <div>
+            {{job.total_jobs_in_hospital + ' jobs for ' + job.name}}
+          </div>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let item of job.items" hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{item.job_title}}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="inner-container">
+          <div class="sections">
+            <div class="title">Department</div>
+            <div class="content">{{item.department}}</div>
+            <div class="buttons"></div>
+          </div>
+          <div class="sections">
+            <div class="title">Hours / Shifts</div>
+            <div class="content">{{item.hours[0] + " hours / " + item.work_schedule}}</div>
+            <div class="buttons"></div>
+          </div>
+          <div class="sections">
+            <div class="title">Summary</div>
+            <div class="content">{{item.description}}</div>
+            <div class="buttons">
+              <button mat-raised-button color="primary">Job Details</button>
+              <button mat-stroked-button color="primary">Save Job</button>
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-expansion-panel>
+</mat-accordion>

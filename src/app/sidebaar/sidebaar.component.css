@@ -1,0 +1,35 @@
+.sidebar-container{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-section{
+    margin: 20px;
+}
+.sidebar-section span{
+    display: flex;
+    justify-content: flex-start;
+}
+.show-more{
+    cursor: pointer;
+}
+.show-more:hover{
+    color: blue;
+}
+
+
+.example-card {
+    max-width: 400px;
+  }
+.job-data p:last-child{
+    margin-left: 8px;
+    color: lightgray;
+}
+
+@media(max-width:372px){
+    .sidebar-container{
+        display: none;
+    }
+    
+    
+
+}

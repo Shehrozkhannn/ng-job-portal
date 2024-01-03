@@ -1,0 +1,8 @@
+::ng-deep .mat-dialog-container{
+    width: 100vw;
+    padding: 0 !important;
+    display: flex;
+}
+.show-more-data{
+    display: flex;
+}

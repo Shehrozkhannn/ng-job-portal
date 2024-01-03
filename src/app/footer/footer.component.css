@@ -1,0 +1,39 @@
+.footer-main{
+    display: flex;
+}
+.footer-section-1{
+    width: 64%;
+}
+.footer-section-1 p{
+    margin-left:30px ;
+}
+.footer-section-2{
+    width: 35%;
+}
+.footer-section-2 ul{
+    list-style-type: none;
+}
+.footer-section-2 ul li{
+    text-decoration: none;
+}
+
+.footer-section-3{
+    width: 30%;
+}
+.footer-section-3 ul{
+    list-style-type: none;
+}
+.footer-section-3 ul li{
+    text-decoration: none;
+}
+.footer-main h3{
+    margin: 15px 30px;
+}
+
+@media(max-width:372px){
+   .footer-main{
+       display: flex;
+       flex-direction: column;
+   }
+
+}

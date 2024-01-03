@@ -1,0 +1,107 @@
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.title {
+    width: 40%;
+}
+
+.content {
+    width: 30%;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+}
+
+.buttons button {
+    margin-bottom: 10px;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgray;
+    border-radius: 8px;
+    margin-right: 10px;
+    padding: 4px;
+    color: white;
+}
+
+::ng-deep .mat-expansion-panel {
+    box-shadow: none !important;
+}
+
+.accordian-header{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 17px 20px
+}
+.total-jobs-posting{
+    height: 30px;
+    width: 150px;
+    margin: 9px 0px
+  
+}
+.accordian-links{
+    height: 30px;
+   
+}
+.accordian-links ul li a{
+    text-decoration: none;
+    margin: 0px 7px;
+    color: #000;
+    
+}
+.accordian-links ul{
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+}
+
+@media(max-width:372px){
+    .accordian-links{
+        display: none;
+    }
+    .accordian-header{
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 11px 20px;
+        margin-top: -22px;
+    }
+
+    ::ng-deep .mat-form-field .mat-form-field-wrapper .mat-form-field-flex {
+        padding: 0px !important;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-right: 15px;
+        width: 100%;
+        border: 1px solid #f4f3f3;
+    }
+    
+}

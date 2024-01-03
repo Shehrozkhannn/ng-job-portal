@@ -1,0 +1,17 @@
+<!-- <div class="container">
+    <div class="header">
+        <h2>department</h2>
+        <mat-icon mat-button mat-dialog-close id="close-icon">close</mat-icon>
+    </div>
+    <div mat-dialog-content>
+        <div class="modal" *ngFor="let department of data">
+            <p class="title1">{{ department.key }}</p>
+            <p class="subtitle">{{ department.doc_count }}</p>
+        </div>
+    </div>
+</div> -->
+
+<div *ngFor="let icon of data" class="show-more-data">
+    <p>{{icon.key}}</p>
+</div>
+
